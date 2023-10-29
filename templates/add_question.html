@@ -1,0 +1,26 @@
+<!-- templates/add_question.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Soru Ekle</title>
+</head>
+<body>
+    <h1>Soru Ekle</h1>
+    <form action="{{ url_for('add_question') }}" method="POST">
+        <label for="question">Soru:</label>
+        <textarea name="question" rows="4" required></textarea>
+        <label for="option_a">Seçenek A:</label>
+        <input type="text" name="option_a" required>
+        <label for="option_b">Seçenek B:</label>
+        <input type="text" name="option_b" required>
+        <label for="option_c">Seçenek C:</label>
+        <input type="text" name="option_c" required>
+        <label for="correct_answer">Doğru Cevap (A/B/C):</label>
+        <input type="text" name="correct_answer" required>
+        <input type="submit" value="Soru Ekle">
+    </form>
+</body>
+</html>

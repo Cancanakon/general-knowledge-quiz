@@ -1,0 +1,108 @@
+/* static/style.css */
+body {
+    overflow: scroll;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+ .my-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff7f00; /* Arka plan rengi */
+            color: #fff; /* Metin rengi */
+            border: none;
+            border-radius: 9px; /* Kenar yuvarlama */
+            cursor: pointer;
+            font-size: 30px;
+        }
+
+ .my-button:hover {
+            background-color: #45a049; /* Fare üzerine gelindiğinde arka plan rengi */
+        }
+/* img etiketini küçültmek için CSS */
+img {
+    width: 200px; /* Genişlik */
+    height: auto; /* Otomatik yükseklik ayarı oranı korur */
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 36px; /* Başlığı daha büyük yap */
+}
+
+form {
+    position:relative;
+    height:%80;
+    margin: 20px auto; /* Dikey hizalamayı ortala */
+    padding: 20px;
+    border: 15px solid #ccc;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Formu yatayda ortala */
+    max-width: 400px; /* Formun maksimum genişliği ayarla */
+}
+
+
+label, input {
+    display: block;
+    margin: 10px auto; /* Dikey hizalamayı ortala */
+    text-align: left; /* Metinleri sola hizala */
+    width: 100%; /* Giriş alanlarını yatayda doldur */
+    font-size: 35px; /* Metin girişlerini daha büyük yap */
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; /* Yeşil renk */
+    color: #fff;
+    padding: 25px 45px; /* Düğme boyutunu artır */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Düğmeyi yatayda doldur */
+    font-size: 35px; /* Düğme metnini daha büyük yap */
+}
+
+#question-container {
+    margin: 20px auto; /* Dikey hizalamayı ortala */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2; /* Gri tonu */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Container'ı yatayda ortala */
+    max-width: 600px; /* Container'ın maksimum genişliği */
+    text-align: center; /* Metinleri sola hizala */
+    font-size: 40px; /* Container içeriğini daha büyük yap */
+}
+
+#timer {
+    margin-top: 20px;
+    font-size: 30px; /* Zamanlayıcı metnini daha büyük yap */
+    color: #333;
+}
+
+table {
+    margin: 40px auto; /* Dikey hizalamayı ortala */
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 2px solid #ccc;
+    padding: 25px; /* Tablo hücrelerini daha büyük yap */
+}
+
+
+th {
+    background-color: #4CAF50; /* Yeşil renk */
+    color: #fff;
+    text-align: left; /* Başlıkları sola hizala */
+    font-size: 20px; /* Başlık metnini daha büyük yap */
+}

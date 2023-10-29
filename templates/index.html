@@ -1,0 +1,62 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>Bilgi Yarışması</title>
+
+</head>
+<body>
+
+<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+
+
+                  <!-- Başlık -->
+    <h1>Ödüllü Bilgi Yarışması</h1>
+
+    <img src="/medya/militek_text.png"
+         style="float:right; align-items:center; padding-top:200px;   padding-right: 140px;"  alt="Resim 1"
+    >
+    <img src="/medya/genc_tdv.png"
+         style="float:left;  align-items:center; margin: 0 auto;  padding-left: 140px; padding-top:200px;"   alt="Resim 2"
+    >
+
+    <!-- Sağ Logo -->
+    <form action="{{ url_for('start_game') }}" method="POST">
+        <label for="first_name">Ad:</label>
+        <input type="text" name="first_name" required>
+        <label for="last_name">Soyad:</label>
+        <input type="text" name="last_name" required>
+        <label for="phone_number">Telefon Numarası:</label>
+        <input type="text" name="phone_number" required>
+
+         <label type="text" style="font-size:15px">Kişisel Verilerin Korunu Kanunu gereğince beyan etmiş olduğunuz hiçbir bilgi 3. bir şahıs tarafından görülmemekte ve paylaşılmamaktadır.
+        Beyan ettiğiniz bilgiler sadece yarışmada derece etmeniz durumunda sizinle iletişime geçmek için kullanılmaktadır. Bu yarışmaya katılarak bu uyarıyı okumuş ve kabul etmiş sayılmaktasınız.
+        </label>
+
+        <input type="submit" value="Yarışmayı Başlat">
+
+    </form>
+                 <img src="/medya/100yil.png"
+         style="float:center; align-items:center; padding-top:50px" alt="Resim 3">
+                <label type="text" style="float:center;text-align:center;  color:white;  font-size:35px ">CUMHURİYETİMİZ 100 YAŞINDA !</label>
+            </ul>
+
+
+</div >
+</body>
+</html>

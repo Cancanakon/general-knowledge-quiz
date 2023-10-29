@@ -1,0 +1,47 @@
+<!-- templates/game.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='game.css') }}">
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- JavaScript dosyanızı ekleyin -->
+    <script>
+    var leaderboardURL = "{{ url_for('leaderboard') }}";
+    </script>
+
+    <title>Bilgi Yarışması</title>
+</head>
+<body>
+<div class="d-flex flex-column justify-content-center w-100 h-100">
+
+	<div class="d-flex flex-column justify-content-center align-items-center">
+    <h1 class="fw-light text-white m-0" style="color:white">Ödüllü Bilgi Yarışması</h1>
+    <div id="question-container">
+        {% if current_question %}
+            <p id="question-text">{{ current_question.question }}</p>
+            <form action="{{ url_for('check_answer', participant_id=participant.id, question_id=current_question.id) }}" method="POST">
+                <input type="radio" name="answer" value="A" required> {{ current_question.option_a }}<br>
+                <input type="radio" name="answer" value="B" required> {{ current_question.option_b }}<br>
+                <input type="radio" name="answer" value="C" required> {{ current_question.option_c }}<br>
+                <input type="hidden" name="remaining_time" value="{{ remaining_time }}">
+                <input type="submit" value="Cevapla">
+            </form>
+        {% else %}
+            <p id="question-text">Soru bulunamadı!</p>
+        {% endif %}
+    </div>
+    <div id="timer">
+        <span id="time-left" data-remaining-time="{{ remainingTime }}"></span>
+    </div>
+
+			<h5 style="float:center;text-align:center;  color:white;  font-size:15px"> — Created by MİLİTEK —</h5>
+
+	</div>
+</div>
+
+</body>
+</html>
